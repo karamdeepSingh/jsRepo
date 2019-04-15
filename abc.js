@@ -7,7 +7,14 @@ var url=process.env.url;
 var username=process.env.usernameVar;
 var password=process.env.passwordVar;
 
+if(username==="usernameReal") {
+    console.log("Equal");  // They are equal so this line will print
+  } else {
+    console.log("Not equal");
+  }
+
 username=username+"a";
+
 password=password+"a";
 console.log("environment variable name",n);
 console.log("environment variable url",url);
