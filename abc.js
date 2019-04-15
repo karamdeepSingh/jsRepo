@@ -7,6 +7,8 @@ var url=process.env.url;
 var username=process.env.usernameVar;
 var password=process.env.passwordVar;
 
+username=username+"a";
+password=password+"a";
 console.log("environment variable name",n);
 console.log("environment variable url",url);
 
