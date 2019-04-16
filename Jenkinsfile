@@ -1,19 +1,21 @@
-import jenkins.model.*
-jenkins = Jenkins.instance
+pipeline {
+    agent any
 
-def username;
-def password;
+    stages {
+        stage ('Compile Stage') {
 
-node{
+            steps {
+                echo "starting"
+            }
+        }
 
-    stage('Checkout'){
-        checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '7b4e7f2d-b175-4b4d-b1cf-c79c268e47bc', url: 'https://github.com/karamdeepSingh/jsRepo.git']]]
+        stage ('Testing Stage') {
+
+            steps {
+                sh 'npm install'
+                  sh 'npm test'
+            }
+        }
+
     }
-
-    stage('Execute'){
-        npm install
-        npm test
-    }
-
-
 }
