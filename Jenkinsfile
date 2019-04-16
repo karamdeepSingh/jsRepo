@@ -12,6 +12,8 @@ pipeline {
             steps {
                 echo "starting"
                 echo ARR
+                echo ARR_USR
+                echo ARR_PSW
             }
         }
 
