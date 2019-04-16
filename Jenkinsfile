@@ -12,8 +12,8 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                sh 'npm install'
-                  sh 'npm test'
+                npm install
+                npm test
             }
         }
 
