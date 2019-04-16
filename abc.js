@@ -24,5 +24,15 @@ console.log("username is",username);
 console.log("password is",password);
 
 console.log("username is",process.env.ARR_USR);
-console.log("password is",process.env.ARR_PSW);
+if(process.env.ARR_USR==="usernameReal"){
+    console.log("username is usernameReal");
+}else{
+    console.log("username is not usernameReal");
+}
 
+console.log("password is",process.env.ARR_PSW);
+if(process.env.ARR_PSW==="passwordReal"){
+    console.log("password is passwordReal");
+}else{
+    console.log("password is not passwordReal");
+}
