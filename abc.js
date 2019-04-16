@@ -22,3 +22,7 @@ console.log("environment variable url",url);
 
 console.log("username is",username);
 console.log("password is",password);
+
+console.log("username is",process.env.ARR_USR);
+console.log("password is",process.env.ARR_PSW);
+
